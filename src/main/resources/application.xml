@@ -3,9 +3,14 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-	<bean id="a" class="com.nt.beans.Address">
-		<property name="country" value="us" />
-		<property name="state" value="ny" />
+	<bean id="a1" class="com.nt.beans.Address" autowire-candidate="false">
+		<property name="country" value="USA" />
+		<property name="state" value="NY" />
+	</bean>
+	<!-- autowire-candidate is true by default -->
+	<bean id="a2" class="com.nt.beans.Address" autowire-candidate="true">
+		<property name="country" value="Nepal" />
+		<property name="state" value="KMD" />
 	</bean>
 
 	<bean id="e" class="com.nt.beans.Employee" autowire="byType">
