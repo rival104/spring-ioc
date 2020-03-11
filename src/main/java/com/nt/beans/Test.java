@@ -7,7 +7,9 @@ public class Test {
 	public static void main(String[] args) {
 		ApplicationContext ctx = new FileSystemXmlApplicationContext("src/main/resources/application.xml");
 		
-//		WishGenerator w1 = (WishGenerator) ctx.getBean("w");
-//		w1.wish();
+		Employee e1 = (Employee) ctx.getBean("e");
+		e1.display();
+		
+		System.out.println("Finish");
 	}
 }
