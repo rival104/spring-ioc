@@ -1,29 +1,14 @@
 package com.nt.beans;
 
 public class Employee {
-	int id;
-	String name;
-	int sal;
-	Address adr;
+	String[] emps;
 	
-	public void setId(int id) {
-		this.id = id;
+	public void setEmps(String[] emps) {
+		this.emps = emps;
 	}
-
-	public void setName(String name) {
-		this.name = name;
+	public void display() {
+		for(String e: emps) {
+			System.out.println(e);
+		}
 	}
-
-	public void setSal(int sal) {
-		this.sal = sal;
-	}
-	
-	public void setAdr(Address adr) {
-		this.adr = adr;
-	}
-
-	public void display(){
-		System.out.println(id+" "+name+" "+sal + " " + adr.country+" "+ adr.state);
-	}
-	
 }

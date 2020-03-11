@@ -10,6 +10,6 @@ public class Test {
 		Employee e1 = (Employee) ctx.getBean("e");
 		e1.display();
 		
-		System.out.println("Finish");
+		System.out.println("--------Finish--------");
 	}
 }

@@ -9,9 +9,12 @@
 	</bean>
 	
 	<bean id="e" class="com.nt.beans.Employee">
-		<property name="id" value="101" />
-		<property name="name" value="Sam" />
-		<property name="sal" value="1000" />
-		<property name="adr" ref="a"/>
+		<property name="emps">
+			<list>
+				<value>Sam</value>
+				<value>Mike</value>
+				<value>Adam</value>
+			</list>
+		</property>
 	</bean>
 </beans>
