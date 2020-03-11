@@ -3,16 +3,15 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-	<bean id="e" class="com.nt.beans.Employee">
+	<bean id="a" class="com.nt.beans.Address">
+		<property name="country" value="us" />
+		<property name="state" value="ny" />
+	</bean>
+
+	<bean id="e" class="com.nt.beans.Employee" autowire="byType">
 		<property name="id" value="101" />
 		<property name="name" value="Sam" />
 		<property name="sal" value="1000" />
-		<property name="adr">
-			<bean class="com.nt.beans.Address">
-				<property name="country" value="us" />
-				<property name="state" value="ny" />
-			</bean>
-		</property>
 	</bean>
-	
+
 </beans>
