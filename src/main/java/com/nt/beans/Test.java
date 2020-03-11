@@ -10,6 +10,9 @@ public class Test {
 		Employee e1 = (Employee) ctx.getBean("e");
 		e1.display();
 		
-		System.out.println("Finish");
+		Address address = (Address) ctx.getBean("a");
+		System.out.println(address.state);
+		System.out.println(address.country);
+		System.out.println("-------Finish--------");
 	}
 }
