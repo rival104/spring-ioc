@@ -3,6 +3,9 @@ package com.nt.beans;
 public class Address {
 	String country;
 	String state;
+	public Address() {
+		System.out.println("Address Constructor.");
+	}
 	public Address(String country, String state) {
 		this.country = country;
 		this.state = state;

@@ -5,10 +5,15 @@
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 	<bean id="a" class="com.nt.beans.Address">
-		<constructor-arg value="USA" />
-		<constructor-arg value="NY" />
+		<property name="country" value="USA" />
+		<property name="state" value="NY" />
 	</bean>
-
-	<bean id="e" class="com.nt.beans.Employee" p:id="101" p:name="Sam" p:sal="1000" p:adr-ref="a"/>
-		
+	<!-- prototype scope creates new object for each get bean call -->
+	<bean id="e" class="com.nt.beans.Employee" scope="prototype">
+		<property name="id" value="101" />
+		<property name="name" value="sam" />
+		<property name="sal" value="1000" />
+		<property name="adr" ref="a" />
+	</bean>
+	
 </beans>

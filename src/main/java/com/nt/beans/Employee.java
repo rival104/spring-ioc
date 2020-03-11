@@ -6,6 +6,10 @@ public class Employee {
 	int sal;
 	Address adr;
 	
+	public Employee() {
+		System.out.println("Employee Constructor.");
+	}
+	
 	public void setId(int id) {
 		this.id = id;
 	}
