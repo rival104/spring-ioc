@@ -1,22 +1,11 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-	<bean id="adr" class="com.nt.beans.Address" >
-		<property name="country" value="USA" />
-		<property name="state" value="NY" />
-	</bean>
-	
-	<bean id="a2" class="com.nt.beans.Address" >
-		<property name="country" value="Nepal" />
-		<property name="state" value="KMD" />
-	</bean>
+	<bean id="adr" class="com.nt.beans.Address" p:country="USA" p:state="NY" />
 
-	<bean id="e" class="com.nt.beans.Employee" autowire="byName">
-		<property name="id" value="101" />
-		<property name="name" value="Sam" />
-		<property name="sal" value="1000" />
-	</bean>
-
+	<bean id="e" class="com.nt.beans.Employee" p:id="101" p:name="Sam" p:sal="1000" p:adr-ref="adr"/>
+		
 </beans>
